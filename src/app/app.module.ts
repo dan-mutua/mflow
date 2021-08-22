@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { MfowAppComponent } from './mflow-app.component';
 import { CommentsComponent } from './comments/comments.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
   declarations: [
     MfowAppComponent,
     CommentsComponent,
+    NavComponent,
    
   ],
   imports: [
@@ -17,6 +19,6 @@ import { CommentsComponent } from './comments/comments.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [MfowAppComponent, CommentsComponent]
+  bootstrap: [MfowAppComponent, CommentsComponent,NavComponent]
 })
 export class AppModule { }
