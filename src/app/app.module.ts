@@ -7,6 +7,8 @@ import { CommentsComponent } from './comments/comments.component';
 import { NavComponent } from './nav/nav.component';
 import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule }  from '@angular/material/icon'
 
 
 @NgModule({
@@ -15,14 +17,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CommentsComponent,
     NavComponent,
     AddQuoteComponent,
-   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
-  bootstrap: [MfowAppComponent, CommentsComponent,NavComponent,AddQuoteComponent]
+  bootstrap: [
+    MfowAppComponent,
+    CommentsComponent,
+    NavComponent,
+    AddQuoteComponent,
+   
+  ],
 })
-export class AppModule { }
+export class AppModule {}
