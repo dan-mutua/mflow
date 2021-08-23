@@ -1,15 +1,19 @@
 <div class="container" id="bbd">
+  
     <div>
       <p>This page displays a few of famous quotes in the world<br>
       you can vote for your famous quotes or also add your favourite quote</p>
     </div>
-    <div class="card" id="qs">
-      <p>It always seems impossible until it's done- <em>Nelson Mandela</em><br>
-      <button   mat-raised-button id="icons" (click)='likesButtonClick()'>like</button>{{ likes}}
-      <button  mat-raised-button id="icons" (click) ='dislikeButtonClick()'>dislike</button> {{ dislikes}}
+    <div class="card" id="qs" *ngFor="let mflow of mflows; let i=index">
+      <p>{{mflow.quote}} <em>{{mflow.author}}</em><br>
+      <button   mat-raised-button id="icons" (click)='likesButtonClick(i)'>like </button>{{mflow.likes}}
+      <button  mat-raised-button id="icons" (click) ='dislikeButtonClick(i)'>dislike </button> {{mflow.dislikes}}
       <button mat-raised-button color='warn' id="icons" >delete</button>
     </div>
-    <div class="card" id="qs">
+    <div>
+      <app-add-quote [createQuote]="quoteFunc"></app-add-quote>
+    </div>
+    <!-- <div class="card" id="qs">
       <p>Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking. - <em>Steve Jobs</em><br>
        <button mat-raised-button id="icons" (click)='likesButtonClick()'>like</button>{{likes}}
       <button mat-raised-button id="icons" (click) ='dislikeButtonClick()'>dislike</button>{{dislikes}}
@@ -45,5 +49,5 @@
       <button mat-raised-button id="icons" (click)='likesButtonClick()'>like</button>{{likes}}
       <button mat-raised-button id="icons" (click) ='dislikeButtonClick()'>dislike</button>{{dislikes}}
       <button mat-raised-button color='warn' id="icons">delete</button></p>
-    </div>
+    </div> -->
 </div>

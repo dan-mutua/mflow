@@ -1,1 +1,11 @@
-<p>add-quote works!</p>
+<form (ngSubmit)="createQuote(author.value, quote.value)">
+  <div class="mb-3">
+    <label for="author" class="form-label">Author: </label>
+    <input type="text" class="form-control" id="author" #author/>
+  </div>
+  <div class="mb-3">
+    <label for="quote" class="form-label">Quote: </label>
+    <input type="text" class="form-control" id="quote" #quote/>
+  </div>
+  <button type="submit" class="btn btn-primary mb-3">Add Quote</button>
+</form>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+// import { Mflow } from '../mflow';
 
 @Component({
   selector: 'app-add-quote',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddQuoteComponent implements OnInit {
 
+  @Input() createQuote: any;
   constructor() { }
 
   ngOnInit(): void {
