@@ -54,13 +54,7 @@ export class CommentsComponent implements OnInit {
     this.mflows[index].dislikes += 1;
   }
 
-  // likesButtonClick1() {
-  //   this.likes++;
-  // }
-
-  // dislikeButtonClick1() {
-  //   this.dislikes++;
-  // }
+ 
 
   ngOnInit(): void {}
 }
